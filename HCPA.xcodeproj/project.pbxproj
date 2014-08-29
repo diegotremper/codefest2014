@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24F1822153954D51B75FF9E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E5DB1F78C141F4ACB89E08 /* libPods.a */; };
+		C688C50919A96B7900030B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C688C50819A96B7900030B91 /* Foundation.framework */; };
+		C688C50B19A96B7900030B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C688C50A19A96B7900030B91 /* CoreGraphics.framework */; };
+		C688C50D19A96B7900030B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C688C50C19A96B7900030B91 /* UIKit.framework */; };
+		C688C51319A96B7900030B91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C688C51119A96B7900030B91 /* InfoPlist.strings */; };
+		C688C51519A96B7900030B91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C51419A96B7900030B91 /* main.m */; };
+		C688C51919A96B7900030B91 /* HCPAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C51819A96B7900030B91 /* HCPAAppDelegate.m */; };
+		C688C51C19A96B7900030B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C688C51A19A96B7900030B91 /* Main.storyboard */; };
+		C688C51F19A96B7900030B91 /* HCPAFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C51E19A96B7900030B91 /* HCPAFirstViewController.m */; };
+		C688C52219A96B7900030B91 /* HCPASecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C52119A96B7900030B91 /* HCPASecondViewController.m */; };
+		C688C52419A96B7900030B91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C688C52319A96B7900030B91 /* Images.xcassets */; };
+		C688C52B19A96B7900030B91 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C688C52A19A96B7900030B91 /* XCTest.framework */; };
+		C688C52C19A96B7900030B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C688C50819A96B7900030B91 /* Foundation.framework */; };
+		C688C52D19A96B7900030B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C688C50C19A96B7900030B91 /* UIKit.framework */; };
+		C688C53519A96B7900030B91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C688C53319A96B7900030B91 /* InfoPlist.strings */; };
+		C688C53719A96B7900030B91 /* HCPATests.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C53619A96B7900030B91 /* HCPATests.m */; };
+		C688C54219A9723C00030B91 /* HCPAListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C54119A9723C00030B91 /* HCPAListTableViewController.m */; };
+		C688C54519A9B46E00030B91 /* HCPADetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C688C54419A9B46E00030B91 /* HCPADetailController.m */; };
+		C688C54A19AC020300030B91 /* ADPLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C688C54919AC020300030B91 /* ADPLogo.png */; };
+		C688C55019AC200300030B91 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = C688C54F19AC200300030B91 /* location.png */; };
+		C68F5A9E19AC567F00DF4CEA /* info-32.png in Resources */ = {isa = PBXBuildFile; fileRef = C68F5A9D19AC567F00DF4CEA /* info-32.png */; };
+		C68F5AA019AC5FE200DF4CEA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68F5A9F19AC5FE200DF4CEA /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C688C52E19A96B7900030B91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C688C4FD19A96B7900030B91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C688C50419A96B7900030B91;
+			remoteInfo = HCPA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A07A01207FD14FF6A097C3D4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C688C50519A96B7900030B91 /* HCPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C688C50819A96B7900030B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C688C50A19A96B7900030B91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C688C50C19A96B7900030B91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C688C51019A96B7900030B91 /* HCPA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HCPA-Info.plist"; sourceTree = "<group>"; };
+		C688C51219A96B7900030B91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C688C51419A96B7900030B91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C688C51619A96B7900030B91 /* HCPA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HCPA-Prefix.pch"; sourceTree = "<group>"; };
+		C688C51719A96B7900030B91 /* HCPAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPAAppDelegate.h; sourceTree = "<group>"; };
+		C688C51819A96B7900030B91 /* HCPAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPAAppDelegate.m; sourceTree = "<group>"; };
+		C688C51B19A96B7900030B91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C688C51D19A96B7900030B91 /* HCPAFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPAFirstViewController.h; sourceTree = "<group>"; };
+		C688C51E19A96B7900030B91 /* HCPAFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPAFirstViewController.m; sourceTree = "<group>"; };
+		C688C52019A96B7900030B91 /* HCPASecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPASecondViewController.h; sourceTree = "<group>"; };
+		C688C52119A96B7900030B91 /* HCPASecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPASecondViewController.m; sourceTree = "<group>"; };
+		C688C52319A96B7900030B91 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C688C52919A96B7900030B91 /* HCPATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HCPATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C688C52A19A96B7900030B91 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C688C53219A96B7900030B91 /* HCPATests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HCPATests-Info.plist"; sourceTree = "<group>"; };
+		C688C53419A96B7900030B91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C688C53619A96B7900030B91 /* HCPATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPATests.m; sourceTree = "<group>"; };
+		C688C54019A9723200030B91 /* HCPAListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPAListTableViewController.h; sourceTree = "<group>"; };
+		C688C54119A9723C00030B91 /* HCPAListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPAListTableViewController.m; sourceTree = "<group>"; };
+		C688C54319A9B46E00030B91 /* HCPADetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPADetailController.h; sourceTree = "<group>"; };
+		C688C54419A9B46E00030B91 /* HCPADetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPADetailController.m; sourceTree = "<group>"; };
+		C688C54919AC020300030B91 /* ADPLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADPLogo.png; sourceTree = "<group>"; };
+		C688C54F19AC200300030B91 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		C68F5A9D19AC567F00DF4CEA /* info-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-32.png"; sourceTree = "<group>"; };
+		C68F5A9F19AC5FE200DF4CEA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E0E5DB1F78C141F4ACB89E08 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C688C50219A96B7900030B91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C688C50B19A96B7900030B91 /* CoreGraphics.framework in Frameworks */,
+				C688C50D19A96B7900030B91 /* UIKit.framework in Frameworks */,
+				C68F5AA019AC5FE200DF4CEA /* MapKit.framework in Frameworks */,
+				C688C50919A96B7900030B91 /* Foundation.framework in Frameworks */,
+				24F1822153954D51B75FF9E6 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C688C52619A96B7900030B91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C688C52B19A96B7900030B91 /* XCTest.framework in Frameworks */,
+				C688C52D19A96B7900030B91 /* UIKit.framework in Frameworks */,
+				C688C52C19A96B7900030B91 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C688C4FC19A96B7900030B91 = {
+			isa = PBXGroup;
+			children = (
+				C688C50E19A96B7900030B91 /* HCPA */,
+				C688C53019A96B7900030B91 /* HCPATests */,
+				C688C50719A96B7900030B91 /* Frameworks */,
+				C688C50619A96B7900030B91 /* Products */,
+				A07A01207FD14FF6A097C3D4 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		C688C50619A96B7900030B91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C688C50519A96B7900030B91 /* HCPA.app */,
+				C688C52919A96B7900030B91 /* HCPATests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C688C50719A96B7900030B91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C68F5A9F19AC5FE200DF4CEA /* MapKit.framework */,
+				C688C50819A96B7900030B91 /* Foundation.framework */,
+				C688C50A19A96B7900030B91 /* CoreGraphics.framework */,
+				C688C50C19A96B7900030B91 /* UIKit.framework */,
+				C688C52A19A96B7900030B91 /* XCTest.framework */,
+				E0E5DB1F78C141F4ACB89E08 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C688C50E19A96B7900030B91 /* HCPA */ = {
+			isa = PBXGroup;
+			children = (
+				C688C54819AC01EC00030B91 /* Images */,
+				C688C54019A9723200030B91 /* HCPAListTableViewController.h */,
+				C688C54119A9723C00030B91 /* HCPAListTableViewController.m */,
+				C688C51719A96B7900030B91 /* HCPAAppDelegate.h */,
+				C688C51819A96B7900030B91 /* HCPAAppDelegate.m */,
+				C688C51A19A96B7900030B91 /* Main.storyboard */,
+				C688C54319A9B46E00030B91 /* HCPADetailController.h */,
+				C688C54419A9B46E00030B91 /* HCPADetailController.m */,
+				C688C51D19A96B7900030B91 /* HCPAFirstViewController.h */,
+				C688C51E19A96B7900030B91 /* HCPAFirstViewController.m */,
+				C688C52019A96B7900030B91 /* HCPASecondViewController.h */,
+				C688C52119A96B7900030B91 /* HCPASecondViewController.m */,
+				C688C52319A96B7900030B91 /* Images.xcassets */,
+				C688C50F19A96B7900030B91 /* Supporting Files */,
+			);
+			path = HCPA;
+			sourceTree = "<group>";
+		};
+		C688C50F19A96B7900030B91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C688C51019A96B7900030B91 /* HCPA-Info.plist */,
+				C688C51119A96B7900030B91 /* InfoPlist.strings */,
+				C688C51419A96B7900030B91 /* main.m */,
+				C688C51619A96B7900030B91 /* HCPA-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C688C53019A96B7900030B91 /* HCPATests */ = {
+			isa = PBXGroup;
+			children = (
+				C688C53619A96B7900030B91 /* HCPATests.m */,
+				C688C53119A96B7900030B91 /* Supporting Files */,
+			);
+			path = HCPATests;
+			sourceTree = "<group>";
+		};
+		C688C53119A96B7900030B91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C688C53219A96B7900030B91 /* HCPATests-Info.plist */,
+				C688C53319A96B7900030B91 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C688C54819AC01EC00030B91 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C68F5A9D19AC567F00DF4CEA /* info-32.png */,
+				C688C54F19AC200300030B91 /* location.png */,
+				C688C54919AC020300030B91 /* ADPLogo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C688C50419A96B7900030B91 /* HCPA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C688C53A19A96B7900030B91 /* Build configuration list for PBXNativeTarget "HCPA" */;
+			buildPhases = (
+				207F22AF4BD0406FB8122AD8 /* Check Pods Manifest.lock */,
+				C688C50119A96B7900030B91 /* Sources */,
+				C688C50219A96B7900030B91 /* Frameworks */,
+				C688C50319A96B7900030B91 /* Resources */,
+				2E31DA4D6EFA45699A1A965D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HCPA;
+			productName = HCPA;
+			productReference = C688C50519A96B7900030B91 /* HCPA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C688C52819A96B7900030B91 /* HCPATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C688C53D19A96B7900030B91 /* Build configuration list for PBXNativeTarget "HCPATests" */;
+			buildPhases = (
+				C688C52519A96B7900030B91 /* Sources */,
+				C688C52619A96B7900030B91 /* Frameworks */,
+				C688C52719A96B7900030B91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C688C52F19A96B7900030B91 /* PBXTargetDependency */,
+			);
+			name = HCPATests;
+			productName = HCPATests;
+			productReference = C688C52919A96B7900030B91 /* HCPATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C688C4FD19A96B7900030B91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HCPA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Diego Tremper";
+				TargetAttributes = {
+					C688C50419A96B7900030B91 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					C688C52819A96B7900030B91 = {
+						TestTargetID = C688C50419A96B7900030B91;
+					};
+				};
+			};
+			buildConfigurationList = C688C50019A96B7900030B91 /* Build configuration list for PBXProject "HCPA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C688C4FC19A96B7900030B91;
+			productRefGroup = C688C50619A96B7900030B91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C688C50419A96B7900030B91 /* HCPA */,
+				C688C52819A96B7900030B91 /* HCPATests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C688C50319A96B7900030B91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C688C54A19AC020300030B91 /* ADPLogo.png in Resources */,
+				C688C52419A96B7900030B91 /* Images.xcassets in Resources */,
+				C688C55019AC200300030B91 /* location.png in Resources */,
+				C688C51319A96B7900030B91 /* InfoPlist.strings in Resources */,
+				C68F5A9E19AC567F00DF4CEA /* info-32.png in Resources */,
+				C688C51C19A96B7900030B91 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C688C52719A96B7900030B91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C688C53519A96B7900030B91 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		207F22AF4BD0406FB8122AD8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2E31DA4D6EFA45699A1A965D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C688C50119A96B7900030B91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C688C54519A9B46E00030B91 /* HCPADetailController.m in Sources */,
+				C688C52219A96B7900030B91 /* HCPASecondViewController.m in Sources */,
+				C688C51919A96B7900030B91 /* HCPAAppDelegate.m in Sources */,
+				C688C51F19A96B7900030B91 /* HCPAFirstViewController.m in Sources */,
+				C688C51519A96B7900030B91 /* main.m in Sources */,
+				C688C54219A9723C00030B91 /* HCPAListTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C688C52519A96B7900030B91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C688C53719A96B7900030B91 /* HCPATests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C688C52F19A96B7900030B91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C688C50419A96B7900030B91 /* HCPA */;
+			targetProxy = C688C52E19A96B7900030B91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C688C51119A96B7900030B91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C688C51219A96B7900030B91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C688C51A19A96B7900030B91 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C688C51B19A96B7900030B91 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C688C53319A96B7900030B91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C688C53419A96B7900030B91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C688C53819A96B7900030B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Software Signing";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Software Signing";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C688C53919A96B7900030B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Software Signing";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Software Signing";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Release;
+		};
+		C688C53B19A96B7900030B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A07A01207FD14FF6A097C3D4 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HCPA/HCPA-Prefix.pch";
+				INFOPLIST_FILE = "HCPA/HCPA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C688C53C19A96B7900030B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A07A01207FD14FF6A097C3D4 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HCPA/HCPA-Prefix.pch";
+				INFOPLIST_FILE = "HCPA/HCPA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C688C53E19A96B7900030B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HCPA.app/HCPA";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HCPA/HCPA-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HCPATests/HCPATests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C688C53F19A96B7900030B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HCPA.app/HCPA";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HCPA/HCPA-Prefix.pch";
+				INFOPLIST_FILE = "HCPATests/HCPATests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C688C50019A96B7900030B91 /* Build configuration list for PBXProject "HCPA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C688C53819A96B7900030B91 /* Debug */,
+				C688C53919A96B7900030B91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C688C53A19A96B7900030B91 /* Build configuration list for PBXNativeTarget "HCPA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C688C53B19A96B7900030B91 /* Debug */,
+				C688C53C19A96B7900030B91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C688C53D19A96B7900030B91 /* Build configuration list for PBXNativeTarget "HCPATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C688C53E19A96B7900030B91 /* Debug */,
+				C688C53F19A96B7900030B91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C688C4FD19A96B7900030B91 /* Project object */;
+}
