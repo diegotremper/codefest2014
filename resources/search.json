@@ -1,0 +1,39 @@
+{
+    "results": [{
+        "id": 1,
+        "name": "Vó Jovelina",
+        "image": "http://www.textualize.com.br/app/logos/1.jpg",
+        "rating": "http://www.textualize.com.br/app/ratings/0.png"
+        }, {
+        "id": 2,
+        "name": "Marco Véio",
+        "image": "http://www.textualize.com.br/app/logos/2.jpg",
+        "rating": "http://www.textualize.com.br/app/ratings/5.png"
+        }, {
+        "id": 3,
+        "name": "King Size",
+        "image": "http://www.textualize.com.br/app/logos/2.jpg",
+        "rating": "http://www.textualize.com.br/app/ratings/4.png"
+        }, {
+        "id": 4,
+        "name": "Fabia Cavalcanti",
+        "image": "http://www.textualize.com.br/app/logos/2.jpg",
+        "rating": "http://www.textualize.com.br/app/ratings/2.png"
+        }, {
+        "id": 5,
+        "name": "Darth Vader",
+        "image": "http://www.textualize.com.br/app/logos/2.jpg",
+        "rating": "http://www.textualize.com.br/app/ratings/0.png"
+        }, {
+        "id": 6,
+        "name": "Iron Man",
+        "image": "http://www.textualize.com.br/app/logos/2.jpg",
+        "rating": "http://www.textualize.com.br/app/ratings/1.png"
+        }, {
+        "id": 7,
+        "name": "Bart Simpson",
+        "image": "http://www.textualize.com.br/app/logos/2.jpg",
+        "rating": "http://www.textualize.com.br/app/ratings/5.png"
+        }
+    ]
+}
