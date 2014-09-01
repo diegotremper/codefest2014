@@ -54,24 +54,15 @@
 }
 
 
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    NSLog(@"Called viewDidAppear");
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSLog(@"Called numberOfSectionsInTableView");
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Called numberOfRowsInSection");
     // Return the number of rows in the section.
     return [self.placeAsArray count];
 }
@@ -80,15 +71,14 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    NSLog(@"Called callForRowAtIndexPath");
+    
     NSDictionary *tempDictionary= [self.placeAsArray objectAtIndex:indexPath.row];
     
-    UIImageView *imageView = [cell viewWithTag:1];
-    UILabel *label = [cell viewWithTag:2];
-    UIImageView *imageRatingView = [cell viewWithTag:3];
-    
-    //NSData *imageData = [NSData dataWithContentsOfURL:];
-    //imageView.image = [UIImage imageWithData:imageData];
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
+    UILabel *label = (UILabel *)[cell viewWithTag:2];
+    UIImageView *imageRatingView = (UIImageView *)[cell viewWithTag:3];
+    UILabel *labelAddress = (UILabel *)[cell viewWithTag:4];
+    UILabel *labelRatingsNbr = (UILabel *)[cell viewWithTag:5];
     
     [imageView setImageWithURL:[NSURL URLWithString:[tempDictionary objectForKey:@"image"]]
                    placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"image_place_%@.png", [tempDictionary objectForKey:@"id"]]]];
@@ -96,10 +86,9 @@
     [imageRatingView setImageWithURL:[NSURL URLWithString:[tempDictionary objectForKey:@"rating"]]
               placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"rating_place_%@.png", [tempDictionary objectForKey:@"id"]]]];
     
-    //NSData *imageRatingData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[tempDictionary objectForKey:@"rating"]]];
-    //imageRatingView.image = [UIImage imageWithData:imageRatingData];
-    
     label.text = [tempDictionary objectForKey:@"name"];
+    labelAddress.text = [tempDictionary objectForKey:@"address"];
+    labelRatingsNbr.text = [NSString stringWithFormat:@"%@ responses", [tempDictionary objectForKey:@"rating_nbr"]];
     
     return cell;
 }
@@ -111,24 +100,20 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@", responseObject);
         self.placeAsArray = [responseObject objectForKey:@"results"];
         [self.tableView reloadData];
         
         UIActivityIndicatorView *aiv = [self.view viewWithTag:12];
         [aiv stopAnimating];
         
-        NSLog(@"Called reloadData");
     } failure:nil];
     [operation start];
-    NSLog(@"Called makePlacesRequests");
-    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"detailViewSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        HCPADetailController *controller = (HCPADetailController *)segue.destinationViewController;
+        HCPADetailViewController *controller = (HCPADetailViewController *)segue.destinationViewController;
         controller.placeDetail = [self.placeAsArray objectAtIndex:indexPath.row];
     }
 }

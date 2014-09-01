@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HCPADetailController.h"
+#import "HCPADetailViewController.h"
 
 @interface HCPAListTableViewController : UITableViewController
 

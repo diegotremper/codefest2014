@@ -28,7 +28,7 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
     self.textFieldLocation.clearButtonMode = UITextFieldViewModeWhileEditing;
     
     if ([self.textFieldSearch.text isEqualToString:@""]) {
-        self.textFieldSearch.placeholder = @"Type keyword";
+        self.textFieldSearch.placeholder = @"Specialty";
     }
     
     if ([self.textFieldLocation.text isEqualToString:@""]) {
@@ -100,7 +100,7 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 
 - (IBAction)searchEditingEnd:(id)sender {
     if ([self.textFieldSearch.text isEqualToString:@""]) {
-        self.textFieldSearch.placeholder = @"Type keyword";
+        self.textFieldSearch.placeholder = @"Specialty";
     }
     
     if ([self.textFieldLocation.text isEqualToString:@""]) {
