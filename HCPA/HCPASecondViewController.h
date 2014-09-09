@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HCPASecondViewController : UIViewController
+@interface HCPASecondViewController : UIViewController<UITextViewDelegate> {
+    CGFloat animatedDistance;
+}
+
+@property(nonatomic) NSString *q;
 
 @end

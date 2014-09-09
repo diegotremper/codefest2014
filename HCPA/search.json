@@ -1,0 +1,30 @@
+{
+    "results": [{
+        "id": 1,
+        "name": "Dr. Leandro Bianchini",
+        "gender": "male",
+        "ocupation": "Pediatricts",
+        "address": "Avenida Soledade, 550",
+        "promoters": 4,
+        "passives": 1,
+        "detractors": 1,
+        "review_team": 1,
+        "review_company": 2,
+        "review_other": 0,
+        "review_avg": 9.5,
+        "reviews": [{
+            "id": 1,
+            "text": "Great doctor. I was seen on time.",
+            "name": "Fernando Morassutti"
+        }, {
+            "id": 2,
+            "text": "Very attentive doc. Highly recommended.",
+            "name": "Diego Tremper"
+        }, {
+            "id": 3,
+            "text": "I trust a lot on this doc. Reliable pleople.",
+            "name": "Mauricio Ressetto"
+        }]
+        }
+    ]
+}

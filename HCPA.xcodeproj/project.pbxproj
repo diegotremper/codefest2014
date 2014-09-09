@@ -10,6 +10,9 @@
 		24F1822153954D51B75FF9E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E5DB1F78C141F4ACB89E08 /* libPods.a */; };
 		C635BE1F19B04AE500255B15 /* HCPADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C635BE1E19B04AE500255B15 /* HCPADetailViewController.m */; };
 		C635BE2219B0520A00255B15 /* HCPAReviewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C635BE2119B0520A00255B15 /* HCPAReviewsTableViewController.m */; };
+		C6887EDC19BBEA4300FC7EFB /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = C6887EDB19BBEA4300FC7EFB /* search.json */; };
+		C6887EDF19BD5F7C00FC7EFB /* HCPATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6887EDE19BD5F7C00FC7EFB /* HCPATabBarController.m */; };
+		C6887EE219BFBB3A00FC7EFB /* HCPAThanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6887EE119BFBB3A00FC7EFB /* HCPAThanksViewController.m */; };
 		C688C50919A96B7900030B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C688C50819A96B7900030B91 /* Foundation.framework */; };
 		C688C50B19A96B7900030B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C688C50A19A96B7900030B91 /* CoreGraphics.framework */; };
 		C688C50D19A96B7900030B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C688C50C19A96B7900030B91 /* UIKit.framework */; };
@@ -41,7 +44,6 @@
 		C6B1B50719B008E900B18503 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B1B4FB19B008E900B18503 /* 3.png */; };
 		C6B1B50819B008E900B18503 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B1B4FC19B008E900B18503 /* 4.png */; };
 		C6B1B50919B008E900B18503 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B1B4FD19B008E900B18503 /* 5.png */; };
-		C6B1B50A19B008E900B18503 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B1B4FE19B008E900B18503 /* search.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,11 @@
 		C635BE1E19B04AE500255B15 /* HCPADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPADetailViewController.m; sourceTree = "<group>"; };
 		C635BE2019B0520A00255B15 /* HCPAReviewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPAReviewsTableViewController.h; sourceTree = "<group>"; };
 		C635BE2119B0520A00255B15 /* HCPAReviewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPAReviewsTableViewController.m; sourceTree = "<group>"; };
+		C6887EDB19BBEA4300FC7EFB /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = search.json; path = ../HCPA/search.json; sourceTree = "<group>"; };
+		C6887EDD19BD5F7C00FC7EFB /* HCPATabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPATabBarController.h; sourceTree = "<group>"; };
+		C6887EDE19BD5F7C00FC7EFB /* HCPATabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPATabBarController.m; sourceTree = "<group>"; };
+		C6887EE019BFBB3A00FC7EFB /* HCPAThanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPAThanksViewController.h; sourceTree = "<group>"; };
+		C6887EE119BFBB3A00FC7EFB /* HCPAThanksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPAThanksViewController.m; sourceTree = "<group>"; };
 		C688C50519A96B7900030B91 /* HCPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C688C50819A96B7900030B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C688C50A19A96B7900030B91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,7 +105,6 @@
 		C6B1B4FB19B008E900B18503 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		C6B1B4FC19B008E900B18503 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		C6B1B4FD19B008E900B18503 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
-		C6B1B4FE19B008E900B18503 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 		E0E5DB1F78C141F4ACB89E08 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -171,6 +177,10 @@
 				C688C51719A96B7900030B91 /* HCPAAppDelegate.h */,
 				C688C51819A96B7900030B91 /* HCPAAppDelegate.m */,
 				C688C51A19A96B7900030B91 /* Main.storyboard */,
+				C6887EE019BFBB3A00FC7EFB /* HCPAThanksViewController.h */,
+				C6887EE119BFBB3A00FC7EFB /* HCPAThanksViewController.m */,
+				C6887EDD19BD5F7C00FC7EFB /* HCPATabBarController.h */,
+				C6887EDE19BD5F7C00FC7EFB /* HCPATabBarController.m */,
 				C635BE2019B0520A00255B15 /* HCPAReviewsTableViewController.h */,
 				C635BE2119B0520A00255B15 /* HCPAReviewsTableViewController.m */,
 				C635BE1D19B04AE500255B15 /* HCPADetailViewController.h */,
@@ -227,11 +237,11 @@
 		C6B1B4F019B008E900B18503 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6887EDB19BBEA4300FC7EFB /* search.json */,
 				C6B1B4F119B008E900B18503 /* ADPLogo.png */,
 				C6B1B4F219B008E900B18503 /* arraw.png */,
 				C6B1B4F319B008E900B18503 /* logos */,
 				C6B1B4F719B008E900B18503 /* ratings */,
-				C6B1B4FE19B008E900B18503 /* search.json */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -351,7 +361,6 @@
 				C6B1B50719B008E900B18503 /* 3.png in Resources */,
 				C6B1B50419B008E900B18503 /* 0.png in Resources */,
 				C688C54A19AC020300030B91 /* ADPLogo.png in Resources */,
-				C6B1B50A19B008E900B18503 /* search.json in Resources */,
 				C6B1B50619B008E900B18503 /* 2.png in Resources */,
 				C6B1B50019B008E900B18503 /* arraw.png in Resources */,
 				C6B1B50919B008E900B18503 /* 5.png in Resources */,
@@ -363,6 +372,7 @@
 				C688C51319A96B7900030B91 /* InfoPlist.strings in Resources */,
 				C6B1B50119B008E900B18503 /* 1.jpg in Resources */,
 				C6B1B50819B008E900B18503 /* 4.png in Resources */,
+				C6887EDC19BBEA4300FC7EFB /* search.json in Resources */,
 				C68F5A9E19AC567F00DF4CEA /* info-32.png in Resources */,
 				C688C51C19A96B7900030B91 /* Main.storyboard in Resources */,
 				C6B1B50319B008E900B18503 /* Thumbs.db in Resources */,
@@ -422,6 +432,8 @@
 				C688C51F19A96B7900030B91 /* HCPAFirstViewController.m in Sources */,
 				C688C51519A96B7900030B91 /* main.m in Sources */,
 				C635BE1F19B04AE500255B15 /* HCPADetailViewController.m in Sources */,
+				C6887EE219BFBB3A00FC7EFB /* HCPAThanksViewController.m in Sources */,
+				C6887EDF19BD5F7C00FC7EFB /* HCPATabBarController.m in Sources */,
 				C635BE2219B0520A00255B15 /* HCPAReviewsTableViewController.m in Sources */,
 				C688C54219A9723C00030B91 /* HCPAListTableViewController.m in Sources */,
 			);

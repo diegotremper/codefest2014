@@ -32,7 +32,7 @@
     label.font = [UIFont boldSystemFontOfSize: 14.0f];
     label.textAlignment = UITextAlignmentCenter;
     label.textColor = [UIColor whiteColor];
-    label.text = [NSString stringWithFormat:@"%@\n%@", self.q, self.location];
+    label.text = [NSString stringWithFormat:@"Showing results for %@\n%@", self.q, self.location];
     self.navigationController.navigationBar.topItem.title = @"";
     [label sizeToFit];
     
@@ -40,16 +40,13 @@
     
     self.placeAsArray = [[NSArray alloc] init];
     [self makePlacesRequests];
-    self.navigationController.navigationBarHidden = NO;
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
-    self.navigationController.navigationBarHidden = YES;
     [super viewWillDisappear:animated];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    self.navigationController.navigationBarHidden = NO;
     [super viewWillAppear:animated];
 }
 
@@ -76,38 +73,31 @@
     
     UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
     UILabel *label = (UILabel *)[cell viewWithTag:2];
-    UIImageView *imageRatingView = (UIImageView *)[cell viewWithTag:3];
     UILabel *labelAddress = (UILabel *)[cell viewWithTag:4];
     UILabel *labelRatingsNbr = (UILabel *)[cell viewWithTag:5];
+    UILabel *avgNbr = (UILabel *)[cell viewWithTag:6];
     
-    [imageView setImageWithURL:[NSURL URLWithString:[tempDictionary objectForKey:@"image"]]
-                   placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"image_place_%@.png", [tempDictionary objectForKey:@"id"]]]];
-    
-    [imageRatingView setImageWithURL:[NSURL URLWithString:[tempDictionary objectForKey:@"rating"]]
-              placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"rating_place_%@.png", [tempDictionary objectForKey:@"id"]]]];
-    
+    [imageView setImage:[UIImage imageNamed:[tempDictionary objectForKey:@"gender"]]];
     label.text = [tempDictionary objectForKey:@"name"];
     labelAddress.text = [tempDictionary objectForKey:@"address"];
-    labelRatingsNbr.text = [NSString stringWithFormat:@"%@ responses", [tempDictionary objectForKey:@"rating_nbr"]];
+    labelRatingsNbr.text = [NSString stringWithFormat:@"(%@) Team (%@) Company (%@) Other", [tempDictionary objectForKey:@"review_team"], [tempDictionary objectForKey:@"review_company"], [tempDictionary objectForKey:@"review_other"]];
+    avgNbr.text = [NSString stringWithFormat:@"%@ %%", [tempDictionary objectForKey:@"review_avg"]];
     
     return cell;
 }
 
 -(void)makePlacesRequests
 {
-    NSURL *URL = [NSURL URLWithString:@"http://www.textualize.com.br/app/search.json"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.placeAsArray = [responseObject objectForKey:@"results"];
-        [self.tableView reloadData];
-        
-        UIActivityIndicatorView *aiv = [self.view viewWithTag:12];
-        [aiv stopAnimating];
-        
-    } failure:nil];
-    [operation start];
+     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"search" ofType:@"json"];
+     NSData* data = [NSData dataWithContentsOfFile:filePath];
+     __autoreleasing NSError* error = nil;
+     id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    
+    self.placeAsArray = [result objectForKey:@"results"];
+    [self.tableView reloadData];
+    
+    UIActivityIndicatorView *aiv = (UIActivityIndicatorView *)[self.view viewWithTag:12];
+    [aiv stopAnimating];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -115,6 +105,9 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         HCPADetailViewController *controller = (HCPADetailViewController *)segue.destinationViewController;
         controller.placeDetail = [self.placeAsArray objectAtIndex:indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"askSegue"]) {
+        HCPASecondViewController *controller = (HCPASecondViewController *)segue.destinationViewController;
+        controller.q = self.q;
     }
 }
 

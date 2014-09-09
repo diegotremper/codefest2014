@@ -33,17 +33,13 @@
     [super viewDidLoad];
     
     self.headerLabel.text = [self.placeDetail objectForKey:@"name"];
-    [self.headerRating setImageWithURL:[NSURL URLWithString:[self.placeDetail objectForKey:@"ratingw"]]
-                    placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"ratingw_place_%@.png", [self.placeDetail objectForKey:@"id"]]]];
-    
-    self.headerRatingCount.text = [NSString stringWithFormat:@"%@ responses", [self.placeDetail objectForKey:@"rating_nbr"]];
-    
-    [self.headerFullImage setImageWithURL:[NSURL URLWithString:[self.placeDetail objectForKey:@"full_image"]]
-              placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"full_image_%@.jpg", [self.placeDetail objectForKey:@"id"]]]];
-    
-    [self.headerImage setImageWithURL:[NSURL URLWithString:[self.placeDetail objectForKey:@"imagew"]]
-              placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"imagew_place_%@.png", [self.placeDetail objectForKey:@"id"]]]];
-    
+    [self.headerImage setImage:[UIImage imageNamed:[self.placeDetail objectForKey:@"gender"]]];
+    self.scoreText.text = [NSString stringWithFormat:@"%@ %%", [self.placeDetail objectForKey:@"review_avg"]];
+    self.textOcupation.text = [self.placeDetail objectForKey:@"ocupation"];
+    [self.buttonTeam setTitle: [NSString stringWithFormat:@"Team (%@)", [self.placeDetail objectForKey:@"review_team"]] forState:UIControlStateNormal];
+    [self.buttonCompany setTitle: [NSString stringWithFormat:@"Company (%@)", [self.placeDetail objectForKey:@"review_company"]] forState:UIControlStateNormal];
+    [self.buttonOther
+     setTitle: [NSString stringWithFormat:@"Other (%@)", [self.placeDetail objectForKey:@"review_other"]] forState:UIControlStateNormal];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -115,7 +111,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"ReviewCell";
-    NSLog(@"cellForRowAtIndexPath");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (indexPath.row == 0) {
@@ -125,42 +120,55 @@
             self.viewOfSelf.hidden = NO;
         }
         
-        UIImageView *hRating = (UIImageView *)[self.viewOfSelf viewWithTag:312];
-        UIImageView *hFullImage = (UIImageView *)[self.viewOfSelf viewWithTag:20];
         UIImageView *hImage = (UIImageView *)[self.viewOfSelf viewWithTag:344];
+        [hImage setImage:[UIImage imageNamed:[self.placeDetail objectForKey:@"gender"]]];
+        UIImageView *ratingsView = nil;
         
-        [hRating setImageWithURL:[NSURL URLWithString:[self.placeDetail objectForKey:@"ratingw"]]
-                          placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"ratingw_place_%@.png", [self.placeDetail objectForKey:@"id"]]]];
+        for (int i = 601; i < 606; i++) {
+            ratingsView = (UIImageView *)[self.viewOfSelf viewWithTag:i];
+            int rat = [[self.placeDetail objectForKey:@"promoters"] integerValue];
+            int j = i - 600;
+            if (rat >= j) {
+                [ratingsView setImage: [UIImage imageNamed:@"promoter"]];
+            } else {
+                [ratingsView setImage:nil];
+            }
+        }
         
-        [hFullImage setImageWithURL:[NSURL URLWithString:[self.placeDetail objectForKey:@"full_image"]]
-                             placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"full_image_%@.jpg", [self.placeDetail objectForKey:@"id"]]]];
+        for (int i = 701; i < 706; i++) {
+            ratingsView = (UIImageView *)[self.viewOfSelf viewWithTag:i];
+            int rat = [[self.placeDetail objectForKey:@"passives"] integerValue];
+            int j = i - 700;
+            if (rat >= j) {
+                [ratingsView setImage: [UIImage imageNamed:@"passive"]];
+            } else {
+                [ratingsView setImage:nil];
+            }
+        }
         
-        [hImage setImageWithURL:[NSURL URLWithString:[self.placeDetail objectForKey:@"imagew"]]
-                         placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"imagew_place_%@.png", [self.placeDetail objectForKey:@"id"]]]];
+        for (int i = 801; i < 806; i++) {
+            ratingsView = (UIImageView *)[self.viewOfSelf viewWithTag:i];
+            int rat = [[self.placeDetail objectForKey:@"detractors"] integerValue];
+            int j = i - 800;
+            if (rat >= j) {
+                [ratingsView setImage: [UIImage imageNamed:@"detractor"]];
+            } else {
+                [ratingsView setImage:nil];
+            }
+        }
         
         [cell addSubview:self.viewOfSelf];
     } else {
         NSArray *reviewsAsArray = [self.placeDetail objectForKey:@"reviews"];
         NSDictionary *tempDictionary= [reviewsAsArray objectAtIndex:indexPath.row - 1];
         UIImageView *avatarView = (UIImageView *)[cell viewWithTag:100];
-        UIImageView *ratingView = (UIImageView *)[cell viewWithTag:400];
         UILabel *nameView = (UILabel *)[cell viewWithTag:101];
-        UILabel *ocupationView = (UILabel *)[cell viewWithTag:102];
         UILabel *textView = (UILabel *)[cell viewWithTag:103];
-        UILabel *agoView = (UILabel *)[cell viewWithTag:450];
         
-        [avatarView setImageWithURL:[NSURL URLWithString:[tempDictionary objectForKey:@"avatar"]]
-                  placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"avatar_%@.png", [tempDictionary objectForKey:@"id"]]]];
-        
-        [ratingView setImageWithURL:[NSURL URLWithString:[tempDictionary objectForKey:@"p_rating"]]
-                   placeholderImage:[UIImage imageNamed:[NSString stringWithFormat:@"ratingid_%@.png", [tempDictionary objectForKey:@"id"]]]];
-        
+        [avatarView setImage:[UIImage imageNamed:@"associate"]];
         nameView.text = [tempDictionary objectForKey:@"name"];
-        ocupationView.text = [tempDictionary objectForKey:@"ocupation"];
         textView.text = [tempDictionary objectForKey:@"text"];
-        agoView.text = [tempDictionary objectForKey:@"ago"];
     }
-    
     return cell;
 }
 
@@ -168,7 +176,7 @@
     if (indexPath.row == 0) {
         return 168;
     } else {
-        return 95;
+        return 60;
     }
 }
 

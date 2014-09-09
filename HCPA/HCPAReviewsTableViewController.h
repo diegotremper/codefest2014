@@ -15,8 +15,11 @@
 @property (strong, nonatomic) NSDictionary *placeDetail;
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *headerImage;
-@property (weak, nonatomic) IBOutlet UIImageView *headerRating;
 @property (weak, nonatomic) IBOutlet UILabel *headerRatingCount;
-@property (weak, nonatomic) IBOutlet UIImageView *headerFullImage;
+@property (weak, nonatomic) IBOutlet UILabel *scoreText;
+@property (weak, nonatomic) IBOutlet UILabel *textOcupation;
+@property (weak, nonatomic) IBOutlet UIButton *buttonTeam;
+@property (weak, nonatomic) IBOutlet UIButton *buttonOther;
+@property (weak, nonatomic) IBOutlet UIButton *buttonCompany;
 
 @end

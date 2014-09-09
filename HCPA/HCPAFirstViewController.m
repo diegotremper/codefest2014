@@ -28,11 +28,11 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
     self.textFieldLocation.clearButtonMode = UITextFieldViewModeWhileEditing;
     
     if ([self.textFieldSearch.text isEqualToString:@""]) {
-        self.textFieldSearch.placeholder = @"Specialty";
+        self.textFieldSearch.placeholder = @"Specialy you looking for";
     }
     
     if ([self.textFieldLocation.text isEqualToString:@""]) {
-        self.textFieldLocation.placeholder = @"Your Location";
+        self.textFieldLocation.placeholder = @"Location (Optional)";
     }
     
     [self.textFieldLocation resignFirstResponder];
@@ -64,7 +64,7 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.navigationBar.topItem.title = @"Search";
     [self.textFieldLocation resignFirstResponder];
     [self.textFieldSearch resignFirstResponder];
 }
@@ -94,49 +94,42 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 }
 
 - (IBAction)searchEditingStart:(id)sender {
-    self.textFieldSearch.placeholder = @"";
-    self.textFieldLocation.placeholder = @"";
+    if ([self.textFieldSearch.text isEqualToString:@""]) {
+        self.textFieldSearch.placeholder = @"";
+    }
+    
+    if ([self.textFieldLocation.text isEqualToString:@""]) {
+        self.textFieldLocation.placeholder = @"";
+    }
 }
 
 - (IBAction)searchEditingEnd:(id)sender {
     if ([self.textFieldSearch.text isEqualToString:@""]) {
-        self.textFieldSearch.placeholder = @"Specialty";
+        self.textFieldSearch.placeholder = @"Specialy you looking for";
     }
     
     if ([self.textFieldLocation.text isEqualToString:@""]) {
-        self.textFieldLocation.placeholder = @"Your Location";
+        self.textFieldLocation.placeholder = @"Location (Optional)";
     }
 }
 
 - (IBAction)locationEdtitionStart:(id)sender {
     
-    CGRect textFieldRect =
-    [self.view.window convertRect:self.textFieldLocation.bounds fromView:self.textFieldLocation];
-    CGRect viewRect =
-    [self.view.window convertRect:self.view.bounds fromView:self.view];
+    CGRect textFieldRect = [self.view.window convertRect:self.textFieldLocation.bounds fromView:self.textFieldLocation];
+    CGRect viewRect =[self.view.window convertRect:self.view.bounds fromView:self.view];
     
     CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
-    CGFloat numerator =
-    midline - viewRect.origin.y
-    - MINIMUM_SCROLL_FRACTION * viewRect.size.height;
-    CGFloat denominator =
-    (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION)
-    * viewRect.size.height;
+    CGFloat numerator = midline - viewRect.origin.y - MINIMUM_SCROLL_FRACTION * viewRect.size.height;
+    CGFloat denominator = (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION) * viewRect.size.height;
     CGFloat heightFraction = numerator / denominator;
-    if (heightFraction < 0.0)
-    {
+    
+    if (heightFraction < 0.0) {
         heightFraction = 0.0;
-    }
-    else if (heightFraction > 1.0)
-    {
+    } else if (heightFraction > 1.0) {
         heightFraction = 1.0;
     }
     
-    NSLog(@"THE LOG SCORE : %f", 	animatedDistance);
-    
     animatedDistance = floor(PORTRAIT_KEYBOARD_HEIGHT * heightFraction);
-    
-    NSLog(@"THE LOG SCORE : %f", animatedDistance);
     
     CGRect viewFrame = self.view.frame;
     viewFrame.origin.y -= animatedDistance;
@@ -153,7 +146,7 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 - (IBAction)locationEditionEnd:(id)sender {
 
     CGRect viewFrame = self.view.frame;
-    viewFrame.origin.y = 0;
+    viewFrame.origin.y += animatedDistance;
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:YES];
