@@ -28,7 +28,7 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
     self.textFieldLocation.clearButtonMode = UITextFieldViewModeWhileEditing;
     
     if ([self.textFieldSearch.text isEqualToString:@""]) {
-        self.textFieldSearch.placeholder = @"Specialy you looking for";
+        self.textFieldSearch.placeholder = @"Specialty you looking for";
     }
     
     if ([self.textFieldLocation.text isEqualToString:@""]) {
@@ -58,7 +58,7 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 }
 
 -(void)setLocation{
-    [self.textFieldLocation setText:@"Roseland, NJ"];
+    [self.textFieldLocation setText:@"Porto Alegre, RS"];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -105,7 +105,7 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 
 - (IBAction)searchEditingEnd:(id)sender {
     if ([self.textFieldSearch.text isEqualToString:@""]) {
-        self.textFieldSearch.placeholder = @"Specialy you looking for";
+        self.textFieldSearch.placeholder = @"Specialty you looking for";
     }
     
     if ([self.textFieldLocation.text isEqualToString:@""]) {

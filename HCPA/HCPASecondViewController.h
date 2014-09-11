@@ -14,4 +14,6 @@
 
 @property(nonatomic) NSString *q;
 
+@property(nonatomic) NSInteger *countResults;
+
 @end

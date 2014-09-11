@@ -40,16 +40,15 @@
     
     self.placeAsArray = [[NSArray alloc] init];
     [self makePlacesRequests];
+
+    if ([self.placeAsArray count] == 0) {
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(gotoAsk) userInfo:nil repeats:NO];
+    }
 }
 
--(void) viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+-(void) gotoAsk {
+    [self performSegueWithIdentifier:@"askSegue" sender:self];
 }
-
-- (void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
 
 #pragma mark - Table view data source
 
@@ -93,7 +92,10 @@
      __autoreleasing NSError* error = nil;
      id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
-    self.placeAsArray = [result objectForKey:@"results"];
+    NSPredicate *bPredicate = [NSPredicate predicateWithFormat:@"keyword CONTAINS %@", self.q];
+    
+    self.placeAsArray = [[result objectForKey:@"results"] filteredArrayUsingPredicate:bPredicate];
+    //self.placeAsArray = [result objectForKey:@"results"];
     [self.tableView reloadData];
     
     UIActivityIndicatorView *aiv = (UIActivityIndicatorView *)[self.view viewWithTag:12];
@@ -108,6 +110,7 @@
     } else if ([segue.identifier isEqualToString:@"askSegue"]) {
         HCPASecondViewController *controller = (HCPASecondViewController *)segue.destinationViewController;
         controller.q = self.q;
+        controller.countResults = [self.placeAsArray count];
     }
 }
 

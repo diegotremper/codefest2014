@@ -18,6 +18,7 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 @property (weak, nonatomic) IBOutlet UITabBarItem *requestItem;
 @property (weak, nonatomic) IBOutlet UITextField *specialyText;
 @property (weak, nonatomic) IBOutlet UITextView *obsText;
+@property (weak, nonatomic) IBOutlet UITextView *labelSorry;
 
 @end
 
@@ -38,7 +39,12 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
     //The rounded corner part, where you specify your view's corner radius:
     _obsText.layer.cornerRadius = 5;
     _obsText.clipsToBounds = YES;
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    if (self.countResults == 0) {
+        _labelSorry.hidden = FALSE;
+    }
+    
+    _obsText.text = [NSString stringWithFormat:@"Do you know a good %@? Please help me finding one.", self.q];
 }
 
 - (void)didReceiveMemoryWarning

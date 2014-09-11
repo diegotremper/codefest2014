@@ -1,17 +1,18 @@
 {
     "results": [{
         "id": 1,
-        "name": "Dr. Leandro Bianchini",
+        "name": "Dr. André Silva",
         "gender": "male",
         "ocupation": "Pediatricts",
         "address": "Avenida Soledade, 550",
+        "keyword": "pediatric",
         "promoters": 4,
         "passives": 1,
         "detractors": 1,
-        "review_team": 1,
-        "review_company": 2,
-        "review_other": 0,
-        "review_avg": 9.5,
+        "review_team": 3,
+        "review_company": 1,
+        "review_other": 2,
+        "review_avg": 50,
         "reviews": [{
             "id": 1,
             "text": "Great doctor. I was seen on time.",
@@ -23,8 +24,27 @@
         }, {
             "id": 3,
             "text": "I trust a lot on this doc. Reliable pleople.",
-            "name": "Mauricio Ressetto"
+            "name": "Mauricio Rossetto"
         }]
-        }
+    },
+                {
+                "id": 2,
+                "name": "Dr. Roberto Cardoso",
+                "gender": "male",
+                "ocupation": "Pediatricts",
+                "address": "Avenida Soledade, 550",
+                "keyword": "pediatric",
+                "promoters": 1,
+                "passives": 0,
+                "detractors": 0,
+                "review_team": 0,
+                "review_company": 0,
+                "review_other": 1,
+                "review_avg": 100,
+                "reviews": [{
+                            "id": 4,
+                            "text": "Very good doc.",
+                            "name": "Leandro Bianchini"
+                            }]}
     ]
 }
